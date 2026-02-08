@@ -4,7 +4,8 @@ import random
 from fpdf import FPDF
 
 # --- 1. Configuration of the Gemini 1.5 Flash API ---
-genai.configure(api_key="AIzaSyB5U5-f1edVl99djSKEcqDoFLcI2l6uYyI")
+api_key = st.secrets["GOOGLE_API_KEY"]
+genai.configure(api_key=api_key)
 
 # Define model settings - FIXED: Removed the '#' character
 generation_config = {
